@@ -16,3 +16,8 @@ sources:
         identifier: raw_gz_ship
       - name: sales
         identifier: raw_gz_sales
+        columns:
+          - name: orders_id 
+        tests:
+          - unique:
+              column_name: orders_id 
