@@ -3,9 +3,15 @@ version: 2
 sources:
   - name: raw
     schema: course18
+    description: greenweez raw data source
     tables:
       - name: product
         identifier: raw_gz_product
+        columns:
+          - name: products_id
+        tests:
+          - unique:
+              column_name: products_id
       - name: ship
         identifier: raw_gz_ship
       - name: sales
