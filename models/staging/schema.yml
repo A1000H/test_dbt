@@ -9,15 +9,15 @@ sources:
         identifier: raw_gz_product
         columns:
           - name: products_id
-        tests:
-          - unique:
-              column_name: products_id
+            tests:
+              - unique
+             
       - name: ship
         identifier: raw_gz_ship
       - name: sales
         identifier: raw_gz_sales
         columns:
-          - name: pdt_id
+          - name: "(pdt_id||'-'||orders_id)"
         tests:
           - unique:
-              column_name: pdt_id
+              column_name: "(pdt_id||'-'||orders_id)"
