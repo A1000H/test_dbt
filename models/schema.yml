@@ -26,6 +26,20 @@ sources:
               warn_after: { count: 50, period: day }
               error_after: { count: 95, period: day }
               loaded_at_field: "CAST(date_date as TIMESTAMP)"
+
+  - name: raw_2
+    schema: dbt_amil_homens
+    description: greenweez raw data source_2
+    tables:
+      - name: adwords
+        identifier: raw_gz_adwords
+      - name: bing
+        identifier: raw_gz_bing
+      - name: criteo
+        identifier: raw_gz_criteo
+      - name: facebook
+        identifier: raw_gz_facebook
+
 models:
   - name: stg_raw__product
   - name: stg_raw__sales
@@ -34,3 +48,7 @@ models:
   - name: int_orders_margin
   - name: int_orders_operational
   - name: finance_days
+  - name: raw_gz_adwords
+  - name: raw_gz_bing
+  - name: raw_gz_criteo
+  - name: raw_gz_facebook
