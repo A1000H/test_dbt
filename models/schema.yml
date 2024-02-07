@@ -33,12 +33,28 @@ sources:
     tables:
       - name: adwords
         identifier: raw_gz_adwords
+        columns:
+          - name: "(date_date||'-'|| campaign_key)"
+            tests:
+              - unique
       - name: bing
         identifier: raw_gz_bing
+        columns:
+          - name: "(date_date||'-'|| campaign_key)"
+            tests:
+              - unique
       - name: criteo
         identifier: raw_gz_criteo
+        columns:
+          - name: "(date_date||'-'|| campaign_key)"
+            tests:
+              - unique
       - name: facebook
         identifier: raw_gz_facebook
+        columns:
+          - name: "(date_date||'-'|| campaign_key)"
+            tests:
+              - unique
 
 models:
   - name: stg_raw__product
@@ -52,3 +68,4 @@ models:
   - name: raw_gz_bing
   - name: raw_gz_criteo
   - name: raw_gz_facebook
+  - name: int_campaigns
