@@ -70,3 +70,6 @@ models:
   - name: raw_gz_facebook
   - name: int_campaigns
   - name: int_campaigns_day
+  - name: finance_campaigns_day
+  - name: finance_campaigns_month
+  - name: int_orders_operational
